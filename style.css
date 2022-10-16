@@ -118,16 +118,19 @@ h3 {
   transform: rotate(180deg) scaleY(1.1);
 }
 
-/* Pausing the whole widow/game */
-.pause {
+/* user feedback */
+#user-feedback-frame {
+  position: fixed;
+  left: 35%;
+  top: 20%;
+  display: block;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
   pointer-events: none;
 }
-
-/* user feedback */
 #nice-work {
   visibility: hidden;
-  position: relative;
-  left: 40%;
   color: #2B7A0B;
   text-align: center;
   font-family: 'Fredoka One', cursive;
@@ -137,15 +140,12 @@ h3 {
   border-radius: 10px;
   width: 200px;
   height: 50px;
-  z-index: 1;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
 }
 
 #try-again {
   visibility: hidden;
   position: relative;
-  top: -50px;
-  left: 40%;
   color: white;
   text-align: center;
   font-family: 'Fredoka One', cursive;
@@ -155,8 +155,8 @@ h3 {
   border-radius: 10px;
   width: 200px;
   height: 50px;
-  z-index: 2;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .user-feedback-text {

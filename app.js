@@ -98,6 +98,7 @@ function handleCardClick(e) {
               }
               else {
                   clickingAllowed = false;
+                  userFeedbackBad.style.visibility = 'visible';
                   setTimeout(function(){
                       wrongMatch(e); 
                       firstCardClick = true;
@@ -136,8 +137,7 @@ function wrongMatch(e) {
     firstCard.style.content = "url('imgs/card.png')";
     e.target.style.content = "url('imgs/card.png')";
     firstCard.classList.toggle('face-up');
-    e.target.classList.toggle('face-up');
-    userFeedbackBad.style.visibility = 'visible'; 
+    e.target.classList.toggle('face-up'); 
 }
 
 function correctMatch(e) {
