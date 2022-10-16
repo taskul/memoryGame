@@ -8,7 +8,6 @@ const correctMatchSound = new Audio('sounds/yes.wav');
 const overlay = document.getElementById('overlay');
 const userFeedbackGoood = document.getElementById('nice-work');
 const userFeedbackBad = document.getElementById('try-again');
-const congratulations = document.getElementById('endgame-message');
 let clickingAllowed = true; 
 
 const COLORS = [
@@ -46,7 +45,6 @@ function startGame () {
   createDivsForColors(shuffledColors);
   startNewGame.style.visibility = 'hidden';
   overlay.style.display = 'none';
-  congratulations.style.visibility = 'hidden'; 
   document.body.classList.remove('pause');
 }
   
@@ -120,7 +118,6 @@ document.body.addEventListener('click', function(){
     userFeedbackGoood.style.visibility = 'hidden';
     startNewGame.style.visibility = 'visible';
     overlay.style.display = 'block';
-    congratulations.style.visibility = 'visible'; 
     }
   }
 )

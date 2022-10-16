@@ -162,28 +162,6 @@ h3 {
   padding-bottom: 10px;
 }
 
-#endgame-message {
-  visibility: hidden;
-  position: relative;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  top: 30%;
-  color: #2B7A0B;
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
-  font-weight: 100;
-  font-size: 1.5rem;
-   
-  background-color: #EAE509;
-  border-radius: 10px;
-  width: 280px;
-  height: 40px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
-  pointer-events: none;
-}
-
 /* Responsive website text management */
 @media screen and (min-width: 320px) {
     h3 {
