@@ -6,8 +6,10 @@ const startNewGame = document.getElementById('start-game');
 const cardFlipSound = new Audio('sounds/flip.wav');
 const correctMatchSound = new Audio('sounds/yes.wav');
 const overlay = document.getElementById('overlay');
+const endGameOverlay = document.getElementById('endame-overlay');
 const userFeedbackGoood = document.getElementById('nice-work');
 const userFeedbackBad = document.getElementById('try-again');
+const congratulations = document.getElementById('congratulations');
 let clickingAllowed = true; 
 
 const COLORS = [
@@ -45,7 +47,8 @@ function startGame () {
   createDivsForColors(shuffledColors);
   startNewGame.style.visibility = 'hidden';
   overlay.style.display = 'none';
-  document.body.classList.remove('pause');
+  congratulations.style.visibility = 'hidden';
+  endGameOverlay.style.visibility = 'hidden';
 }
   
 function shuffle(array) {
@@ -118,6 +121,9 @@ document.body.addEventListener('click', function(){
     userFeedbackGoood.style.visibility = 'hidden';
     startNewGame.style.visibility = 'visible';
     overlay.style.display = 'block';
+    endGameOverlay.style.visibility = 'visible';
+    congratulations.textContent = 'Congratulations';
+    congratulations.style.visibility = 'visible';   
     }
   }
 )
